@@ -4,8 +4,7 @@
 
 # Active Directory Domain Setup
 
-This project documents the deployment of a traditional **on-premises Active Directory environment** hosted within **Microsoft Azure Virtual Machines**.
-The goal is to demonstrate foundational identity, authentication, and domain management concepts using cloud-based infrastructure while preserving classic on-prem AD architecture.
+This project documents the deployment of a functional **Active Directory environment** hosted within **Microsoft Azure**. I deployed two virtual machines, configured a static IP address for the domain controller, installed Active Directory Domain Services, promoted the server to a domain controller, and verified domain functionality by attaching a Windows client to the new domain. This project demonstrates the foundational steps required to build a Windows Server–based domain environment.
 
 ---
 
