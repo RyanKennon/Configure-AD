@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/7b65e021-0e08-42ae-8da2-f57cd11aceb7" width="300" height="168" alt="image" />
 </p>
 
-# Active Directory Domain Setup
+# Active Directory: Domain Setup
 
 This project documents the deployment of a functional **Active Directory environment** hosted within **Microsoft Azure**. I deployed two virtual machines, configured a static IP address for the domain controller, installed Active Directory Domain Services, promoted the server to a domain controller, and verified domain functionality by attaching a Windows client to the new domain. This project demonstrates the foundational steps required to build a Windows Server–based domain environment.
 
