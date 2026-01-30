@@ -14,6 +14,7 @@ This project documents the deployment of a functional **Active Directory environ
 - Azure Virtual Network
 - Remote Desktop Protocol (RDP)
 - Active Directory Domain Servies (AD DS)
+- Active Directory Users and Computers
 - PowerShell
 
 ---
@@ -142,6 +143,41 @@ This project documents the deployment of a functional **Active Directory environ
   <img width="859" height="561" alt="Drawing10 drawio" src="https://github.com/user-attachments/assets/cb116758-0992-466c-9230-885a7b8a4ebc" />
 </p>
 
+---
+
+### 7) Enable Remote Dial-In for Non-Administrative Users
+
+1. Log into the **client** as the **Domain Administrator**
+2. Right click the **Start Button** and select **System**
+3. Navigate to the **About** page
+4. Select **Rename this PC (advanced)
+5. Click **Change**
+6. Check the **Member of Domain** box and enter the name of the **domain**
+
+<p align="center">
+  <img width="1638" height="1079" alt="Previous1 drawio (1)" src="https://github.com/user-attachments/assets/490a7c5f-43c2-4692-836e-791d75116410" />
+</p>
+
+7. Confirm the changes
+8. Restart the **client VM**
+
+---
+
+### 8) Verify the Virtual Machines are Connected
+
+1. Open the **Server Manager** on the **Domain Controller**
+2. Select **Tools** then **Active Directory Users and Computers**
+
+<p align="center">
+  <img width="1921" height="746" alt="Previous2 drawio (2)" src="https://github.com/user-attachments/assets/3a758583-b630-4971-839f-a02f0c974cab" />
+</p>
+
+3. Expand the **Domain** then click **Computer**
+4. The client VM should be inside
+
+<p align="center">
+  <img width="754" height="529" alt="Previous3 drawio" src="https://github.com/user-attachments/assets/8ce7e5f3-34c7-4138-98ce-e09fe37048f9" />
+</p>
 
 ---
 
