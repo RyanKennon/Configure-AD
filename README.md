@@ -97,11 +97,10 @@ This project documents the deployment of a functional **Active Directory environ
 5. Complete the installation
 
 <p align="center">
-  <<img width="783" height="558" alt="Drawing6 drawio (1)" src="https://github.com/user-attachments/assets/501c6406-cc17-46e2-9f33-6abc957f1de4" />
+  <img width="783" height="558" alt="Drawing6 drawio (1)" src="https://github.com/user-attachments/assets/501c6406-cc17-46e2-9f33-6abc957f1de4" />
 </p>
 
 ---
-
 ### 5) Promote Server to Domain Controller
 
 1. In **Server Manager**, click the **notification flag**
@@ -127,7 +126,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ### 6) Verify Domain Functionality
 
-1. Log into the Client Virtual Machine
+1. Log into the **Client Virtual Machine** as the **Domain Administrator
 2. Open **Windows PowerShell**
 3. Attempt to ping the DC's private IP address
 4. Ensure the ping succeeded
@@ -148,23 +147,36 @@ This project documents the deployment of a functional **Active Directory environ
 
 ### 7) Enable Remote Dial-In for Non-Administrative Users
 
-1. Log into the **client** as the **Domain Administrator**
-2. Right click the **Start Button** and select **System**
-3. Navigate to the **About** page
-4. Select **Rename this PC (advanced)
-5. Click **Change**
-6. Check the **Member of Domain** box and enter the name of the **domain**
+1. In the **Client Virtual Machine** right click the **Start Button** and select **System**
+2. Navigate to the **About** page
+3. Select **Rename this PC (advanced)
+4. Click **Change**
+5. Check the **Member of Domain** box and enter the name of the **domain**
+6. Apply the changes
 
 <p align="center">
   <img width="1638" height="1079" alt="Previous1 drawio (1)" src="https://github.com/user-attachments/assets/490a7c5f-43c2-4692-836e-791d75116410" />
 </p>
 
-7. Confirm the changes
-8. Restart the **client VM**
+---
+
+### 8) Give remote Desktop Permissions to Domain Users
+
+1. On the **Client Virtual Machine** right click the **Start Button** and select **Computer Management**
+2. Go to **Local Users and Groups** and open the **Groups** folder
+3. Select **Remote Desktop Users** and click **Add**
+4. Type **Domain Users** in the box and click **Check Names**
+5. Apply the changes
+
+<p align="center">
+  <img width="1315" height="835" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/0e47978d-ae31-48e5-b0ee-769e49cf6ae9" />
+</p>
+
+9. Restart the VM
 
 ---
 
-### 8) Verify the Virtual Machines are Connected
+### 9) Verify the Virtual Machines are Connected
 
 1. Open the **Server Manager** on the **Domain Controller**
 2. Select **Tools** then **Active Directory Users and Computers**
