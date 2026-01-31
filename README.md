@@ -126,7 +126,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ### 5) Verify Domain Functionality
 
-1. Log into the **Client Virtual Machine** as the **Domain Administrator
+1. Log into the **Client Virtual Machine** as the **Domain Administrator**
 2. Open **Windows PowerShell**
 3. Attempt to ping the DC's private IP address
 4. Ensure the ping succeeded
