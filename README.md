@@ -33,7 +33,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 1) Environment Setup
+### Lab Environment
 
 - **Platform:** Microsoft Azure
 - **Domain Controller:** Windows Server 2022 Datacenter (Azure VM)
@@ -50,7 +50,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 2) Make the DC's IP address Static
+### 1) Make the DC's IP address Static
 
 1. Select the **Domain Controller**
 2. Select **Network Settings**
@@ -70,7 +70,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 3) Attach the Client VM to the DC
+### 2) Attach the Client VM to the DC
 
 1. Select **Client virtual machine**
 2. Select **Network Settings**
@@ -88,7 +88,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 4) Install Active Directory Domain Services
+### 3) Install Active Directory Domain Services
 
 1. Log into the **Domain Controller**
 2. Open **Server Manager**
@@ -101,7 +101,7 @@ This project documents the deployment of a functional **Active Directory environ
 </p>
 
 ---
-### 5) Promote Server to Domain Controller
+### 4) Promote Server to Domain Controller
 
 1. In **Server Manager**, click the **notification flag**
 2. Select **Promote this server to a domain controller**
@@ -124,7 +124,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 6) Verify Domain Functionality
+### 5) Verify Domain Functionality
 
 1. Log into the **Client Virtual Machine** as the **Domain Administrator
 2. Open **Windows PowerShell**
@@ -145,7 +145,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 7) Enable Remote Dial-In for Non-Administrative Users
+### 6) Enable Remote Dial-In for Non-Administrative Users
 
 1. In the **Client Virtual Machine** right click the **Start Button** and select **System**
 2. Navigate to the **About** page
@@ -160,7 +160,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 8) Give remote Desktop Permissions to Domain Users
+### 7) Give Remote Desktop Permissions to Domain Users
 
 1. On the **Client Virtual Machine** right click the **Start Button** and select **Computer Management**
 2. Go to **Local Users and Groups** and open the **Groups** folder
@@ -176,7 +176,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 9) Verify the Virtual Machines are Connected
+### 8) Verify the Virtual Machines are Connected
 
 1. Open the **Server Manager** on the **Domain Controller**
 2. Select **Tools** then **Active Directory Users and Computers**
