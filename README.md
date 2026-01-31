@@ -31,8 +31,6 @@ This project documents the deployment of a functional **Active Directory environ
 
 ## Step-by-Step Walkthrough
 
----
-
 ### Lab Environment
 
 - **Platform:** Microsoft Azure
