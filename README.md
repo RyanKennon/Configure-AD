@@ -50,17 +50,14 @@ This project documents the deployment of a functional **Active Directory environ
 
 ### 1) Make the DC's IP address Static
 
-1. Select the **Domain Controller**
-2. Select **Network Settings**
-3. Open **Network Interface**
+1. Select the **Domain Controller** then select **Network Settings** then open the **Network Interface**
 
 <p align="center">
   <img width="1626" height="533" alt="Drawing3 drawio" src="https://github.com/user-attachments/assets/3d2ec7e6-8b41-4d2c-8082-577b8f82d426">
 </p>
 
-4. Select **ipconfig1**
-5. For Private IP address setting choose **Static**
-6. Save
+2. Select **ipconfig1**
+3. For Private IP address setting choose **Static** and save changes
 
 <p align="center">
   <img width="1870" height="762" alt="Drawing4 drawio" src="https://github.com/user-attachments/assets/b978ad18-23b4-420e-8dec-4edf7962d113" />
@@ -70,29 +67,22 @@ This project documents the deployment of a functional **Active Directory environ
 
 ### 2) Attach the Client VM to the DC
 
-1. Select **Client virtual machine**
-2. Select **Network Settings**
-3. Open **Network Interface**
-4. Select **DNS Servers**
-5. Choose **Custom**
-6. Enter the **DC's Private IP address**
-7. Save
+1. Select **Client virtual machine** then select **Network Settings** and open the **Network Interface**
+2. Select **DNS Servers** and choose **Custom**
+3. Enter the **DC's Private IP address** and save
 
 <p align="center">
   <img width="1384" height="629" alt="Drawing5 drawio" src="https://github.com/user-attachments/assets/50e20109-3927-4b33-a3c9-eca327854bc1" />
 </p>
 
-8. Restart the client VM
+4. Restart the client VM
 
 ---
 
 ### 3) Install Active Directory Domain Services
 
-1. Log into the **Domain Controller**
-2. Open **Server Manager**
-3. Select **Add roles and features**
-4. On the **Server Roles** tab check **Active Directory Domain Services**
-5. Complete the installation
+1. Log into the **Domain Controller** and open the **Server Manager** then select **Add roles and features**
+2. On the **Server Roles** tab check **Active Directory Domain Services** then complete the installation
 
 <p align="center">
   <img width="783" height="558" alt="Drawing6 drawio (1)" src="https://github.com/user-attachments/assets/501c6406-cc17-46e2-9f33-6abc957f1de4" />
@@ -101,41 +91,34 @@ This project documents the deployment of a functional **Active Directory environ
 ---
 ### 4) Promote Server to Domain Controller
 
-1. In **Server Manager**, click the **notification flag**
-2. Select **Promote this server to a domain controller**
+1. In the **Server Manager** click the **notification flag** and select **Promote this server to a domain controller**
 
 <p align="center">
   <img width="1921" height="784" alt="Drawing7 drawio" src="https://github.com/user-attachments/assets/1dde3344-4dd4-4051-bf4a-c71120f3a326" />
 </p>
 
-
-3. Choose **Add a new forest**
-4. Set the root domain name
+2. Choose **Add a new forest** and set the root domain name
 
 <p align="center">
   <img width="759" height="556" alt="Drawing8 drawio" src="https://github.com/user-attachments/assets/1fff2c8d-80e7-4574-98f3-9bea980308ef" />
 </p>
 
-
-5. Set the Directory Services Restore Mode (DSRM) password
-6. Complete the install and reboot the VMM
+3. Set the Directory Services Restore Mode (DSRM) password and complete the install and reboot the VMM
 
 ---
 
 ### 5) Verify Domain Functionality
 
-1. Log into the **Client Virtual Machine** as the **Domain Administrator**
-2. Open **Windows PowerShell**
-3. Attempt to ping the DC's private IP address
-4. Ensure the ping succeeded
+1. Log into the **Client Virtual Machine** as the **Domain Administrator** open **Windows PowerShell**
+2. Attempt to ping the DC's private IP address
+3. Ensure the ping succeeded
 
 <p align="center">
   <img width="858" height="396" alt="Drawing9 drawio" src="https://github.com/user-attachments/assets/e726fac9-d102-4c9b-93f6-c5e6f93eda7d" />
 </p>
 
-
-5. Enter the command **`ipconfig /all`** into Windows Powershell
-6. Confirm the output for the client's DNS settings shows the DC's private IP address
+4. Enter the command **`ipconfig /all`** into Windows Powershell
+5. Confirm the output for the client's DNS settings shows the DC's private IP address
 
 <p align="center">
   <img width="859" height="561" alt="Drawing10 drawio" src="https://github.com/user-attachments/assets/cb116758-0992-466c-9230-885a7b8a4ebc" />
@@ -146,11 +129,8 @@ This project documents the deployment of a functional **Active Directory environ
 ### 6) Enable Remote Dial-In for Non-Administrative Users
 
 1. In the **Client Virtual Machine** right click the **Start Button** and select **System**
-2. Navigate to the **About** page
-3. Select **Rename this PC (advanced)
-4. Click **Change**
-5. Check the **Member of Domain** box and enter the name of the **domain**
-6. Apply the changes
+2. Navigate to the **About** page and select **Rename this PC (advanced) then click **Change**
+3. Check the **Member of Domain** box and enter the name of the **domain** and apply the changes
 
 <p align="center">
   <img width="1638" height="1079" alt="Previous1 drawio (1)" src="https://github.com/user-attachments/assets/490a7c5f-43c2-4692-836e-791d75116410" />
