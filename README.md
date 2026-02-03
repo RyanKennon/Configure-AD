@@ -48,7 +48,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 1) Make the DC's IP address Static
+### 1) Make the Domain Controller's IP address Static
 
 1. Select the **Domain Controller** then select **Network Settings** then open the **Network Interface**
 
@@ -65,7 +65,7 @@ This project documents the deployment of a functional **Active Directory environ
 
 ---
 
-### 2) Attach the Client VM to the DC
+### 2) Attach the Client Virtual Machine to the Domain Controller
 
 1. Select **Client virtual machine** then select **Network Settings** and open the **Network Interface**
 2. Select **DNS Servers** and choose **Custom**
